@@ -1,0 +1,21 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+Отправка письма
+{% endblock title %}
+
+{% block content %}
+
+    <h1>Make an Appointment</h1>
+    <form action="{% url 'start2' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="client_name">Your Name</label>
+        <input type="text" name="client_name"><br>
+        <label for="message">Short description of your issue</label>
+        <input type="text" name="message"><br>
+        <label for="date">Choose time</label>
+        <input type="date" name="date"><br>
+        <input type="submit">
+    </form>
+
+{% endblock content %}

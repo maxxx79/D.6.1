@@ -1,0 +1,16 @@
+{% extends 'flatpages/default.html' %}
+
+
+<html>
+    <head>
+        <title> Страница пользователя {{request.user.username}}</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Simple SignUp / SignIn app</a></h1>
+            <h2><a href="http://127.0.0.1:8000/admin">Admin panel</a></h2>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

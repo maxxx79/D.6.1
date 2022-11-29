@@ -1,0 +1,22 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+АВТОРЫ
+{% endblock title %}
+
+{% block content %}
+<h2>Страница авторизованного пользователя {{request.user.username.title}}</h2>
+<hr>
+<h1>НАШИ ПОЛЬЗОВАТЕЛИ !:</h1>
+<hr>
+   {% for i in uzer %}
+          {% for k in uzer %}
+               {{ k.category }}
+          {% endfor %}
+<tr>
+ <td>
+
+   <h5>{{ i.username.title }}</h5>
+ </td>
+{% endfor %}
+{% endblock content %}
